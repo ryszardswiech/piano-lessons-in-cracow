@@ -6,9 +6,12 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     min-height: 100vh;
-    font-size: 10px;
 }
 
 a {
@@ -21,6 +24,7 @@ a {
 /*****************************************/
 
 /*  Header */
+
 
 header {
     display: grid;
@@ -48,12 +52,12 @@ header::before {
 }
 
 header section {
-    height: 250px;
+    height: 25rem;
     grid-area: headertext;
     border-left: 2px solid #FCFBF9;
     font-family: 'Poiret One', cursive;
     margin-left: 20vw;
-    padding-left: 20px;
+    padding-left: 2rem;
     z-index: 1;
 }
 
@@ -65,31 +69,31 @@ header section div p:nth-of-type(1) {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 1.6rem;
+    font-size: 2.5rem;
 }
 
 header section div p:nth-of-type(2) {
     position: absolute;
-    top: 20px;
-    left: 12px;
-    font-size: 3rem;
+    top: 2rem;
+    left: 1.2rem;
+    font-size: 4.5rem;
 }
 
 header section div p:nth-of-type(3) {
     position: absolute;
-    top: 50px;
-    left: 100px;
-    width: 100px;
-    height: 100px;
+    top: 5rem;
+    left: 10rem;
+    width: 10rem;
+    height: 10rem;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 2.5rem;
 }
 
 header section h1 {
     position: absolute;
-    top: 140px;
-    left: 30px;
-    font-size: 1.1rem;
+    top: 14rem;
+    left: 3rem;
+    font-size: 1.9rem;
     font-weight: normal;
 }
 
@@ -100,7 +104,32 @@ header>div {
 }
 
 header>div i {
-    font-size: 60px;
+    font-size: 5rem;
     z-index: 1;
     transform: rotate(212deg);
 }
+
+@media (min-width: 600px) {
+
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 900px) {
+
+    html {
+        font-size: 25px;
+    }
+}
+
+
+/*
+  @media (min-width: 900px) { @content; }
+
+
+  @media (min-width: 1200px) { @content; }
+
+
+  @media (min-width: 1800px) { @content; }
+*/
