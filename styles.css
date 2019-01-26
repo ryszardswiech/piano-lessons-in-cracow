@@ -12,6 +12,9 @@ html {
 
 body {
     min-height: 100vh;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: white;
 }
 
 a {
@@ -25,13 +28,12 @@ a {
 
 /*  Header */
 
-
 header {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-areas: ".""headertext""button";
-    min-height: 100vh;
+    height: 100vh;
     background-image: url(img/mobile/pexels-photo-112989-640px-height.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,7 +54,7 @@ header::before {
 }
 
 header section {
-    height: 25rem;
+    height: 22rem;
     grid-area: headertext;
     border-left: 2px solid #FCFBF9;
     font-family: 'Poiret One', cursive;
@@ -109,6 +111,7 @@ header>div i {
     transform: rotate(212deg);
 }
 
+
 @media (min-width: 600px) {
 
     html {
@@ -120,6 +123,48 @@ header>div i {
 
     html {
         font-size: 25px;
+    }
+
+    header {
+        background-image: url(img/pexels-photo-112989.jpeg);
+    }
+}
+
+@media (min-width: 1200px) {
+
+    html {
+        font-size: 35px;
+    }
+}
+
+@media (orientation: landscape) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 641px) {
+
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 900px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        background-image: url(img/pexels-photo-112989.jpeg);
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1200px) {
+
+    html {
+        font-size: 22px;
     }
 }
 
