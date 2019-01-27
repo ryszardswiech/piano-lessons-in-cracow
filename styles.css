@@ -1,9 +1,16 @@
 /* font-family: 'Poiret One', cursive; */
+/* font-family: 'Comfortaa', cursive; */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --text-header: #FCFBF9;
+    --text-normal: #6E5F36;
+    --text-span: #9A4A30;
 }
 
 html {
@@ -38,7 +45,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    color: #FCFBF9;
+    color: var(--text-header);
 
 }
 
@@ -56,7 +63,7 @@ header::before {
 header section {
     height: 22rem;
     grid-area: headertext;
-    border-left: 2px solid #FCFBF9;
+    border-left: 2px solid var(--text-header);
     font-family: 'Poiret One', cursive;
     margin-left: 20vw;
     padding-left: 2rem;
@@ -110,6 +117,44 @@ header>div i {
     z-index: 1;
     transform: rotate(212deg);
 }
+
+
+/*  SECTION ABOUT */
+
+#about {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 35vh 20vh 35vh 10vh;
+    grid-template-areas: "header-about p1""header-about p2""header-about p3""button button";
+    font-family: 'Comfortaa', cursive;
+    color: var(--text-normal);
+    min-height: 100vh;
+    padding: 0 20px 0 20px;
+}
+
+#about h2 {
+    grid-area: header-about;
+    font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 1.5rem;
+    font-weight: normal;
+}
+
+#about p span {
+    font-weight: bold;
+    color: var(--text-span);
+}
+
+#about p:nth-of-type(1) {
+    padding-top: 2.5rem;
+}
+
+
 
 
 @media (min-width: 600px) {
