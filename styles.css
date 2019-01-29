@@ -1,7 +1,9 @@
 /* font-family: 'Poiret One', cursive; */
 /* font-family: 'Comfortaa', cursive; */
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,191 +37,318 @@ a {
 
 /*  Header */
 
-header {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 2fr 1fr;
-    grid-template-areas: ".""headertext""button";
-    height: 100vh;
-    background-image: url(img/mobile/pexels-photo-112989-640px-height.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: var(--text-header);
-
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-    filter: blur(4px);
-}
-
-header section {
-    height: 22rem;
-    grid-area: headertext;
-    border-left: 2px solid var(--text-header);
-    font-family: 'Poiret One', cursive;
-    margin-left: 20vw;
-    padding-left: 2rem;
-    z-index: 1;
-}
-
-header section div {
-    position: relative;
-}
-
-header section div p:nth-of-type(1) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 2.5rem;
-}
-
-header section div p:nth-of-type(2) {
-    position: absolute;
-    top: 2rem;
-    left: 1.2rem;
-    font-size: 4.5rem;
-}
-
-header section div p:nth-of-type(3) {
-    position: absolute;
-    top: 5rem;
-    left: 10rem;
-    width: 10rem;
-    height: 10rem;
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-header section h1 {
-    position: absolute;
-    top: 14rem;
-    left: 3rem;
-    font-size: 1.9rem;
-    font-weight: normal;
-}
-
-header>div {
-    grid-area: button;
-    text-align: center;
-    line-height: 25vh;
-}
-
-header>div i {
-    font-size: 5rem;
-    z-index: 1;
-    transform: rotate(212deg);
-}
-
-
-/*  SECTION ABOUT */
-
-#about {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 35vh 20vh 35vh 10vh;
-    grid-template-areas: "header-about p1""header-about p2""header-about p3""button button";
-    font-family: 'Comfortaa', cursive;
-    color: var(--text-normal);
-    min-height: 100vh;
-    padding: 0 20px 0 20px;
-}
-
-#about h2 {
-    grid-area: header-about;
-    font-family: 'Poiret One', cursive;
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    text-align: center;
-    margin: 0 auto;
-    letter-spacing: 1.5rem;
-    font-weight: normal;
-}
-
-#about p span {
-    font-weight: bold;
-    color: var(--text-span);
-}
-
-#about p:nth-of-type(1) {
-    padding-top: 2.5rem;
-}
-
-
-
-
-@media (min-width: 600px) {
-
-    html {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 900px) {
-
-    html {
-        font-size: 25px;
-    }
-
+@media (orientation: portrait) {
     header {
-        background-image: url(img/pexels-photo-112989.jpeg);
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: ".""headertext""button";
+        min-height: 100vh;
+        background: center / cover no-repeat url("img/mobile/pexels-photo-112989-640px-height.jpeg");
+        color: var(--text-header);
+
+    }
+
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        filter: blur(4px);
+    }
+
+    header section {
+        height: 22rem;
+        grid-area: headertext;
+        border-left: 0.2rem solid var(--text-header);
+        font-family: 'Poiret One', cursive;
+        margin-left: 20vw;
+        padding-left: 2rem;
+        z-index: 1;
+    }
+
+    header section div {
+        position: relative;
+    }
+
+    header section div p:nth-of-type(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 2.5rem;
+    }
+
+    header section div p:nth-of-type(2) {
+        position: absolute;
+        top: 2rem;
+        left: 1.2rem;
+        font-size: 4.5rem;
+    }
+
+    header section div p:nth-of-type(3) {
+        position: absolute;
+        top: 5rem;
+        left: 10rem;
+        width: 10rem;
+        height: 10rem;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    header section h1 {
+        position: absolute;
+        top: 14rem;
+        left: 3rem;
+        font-size: 1.9rem;
+        font-weight: normal;
+    }
+
+    header>div {
+        grid-area: button;
+        text-align: center;
+        line-height: 25vh;
+    }
+
+    header>div i {
+        font-size: 5rem;
+        z-index: 1;
+        transform: rotate(212deg);
+    }
+
+
+    /******************  SECTION ABOUT ****************/
+
+    #about {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 9fr 1fr;
+        grid-template-areas:
+            "header-about textabout"
+            "button button";
+        font-family: 'Comfortaa', cursive;
+        color: var(--text-normal);
+        min-height: 100vh;
+        /* padding: 0 20px 0 20px; */
+    }
+
+    #about div.photo {
+        grid-area: header-about;
+        height: 70%;
+        width: 70%;
+        margin: 40% auto;
+        padding: 0 3%;
+    }
+
+    #about div.photo img {
+        display: block;
+        border-radius: 50%;
+        width: 100%;
+
+    }
+
+    #about h2 {
+        grid-area: header-about;
+        font-family: 'Poiret One', cursive;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        text-align: center;
+        margin: 0 auto;
+        letter-spacing: 1.5rem;
+        font-weight: normal;
+        padding-top: 2rem;
+    }
+
+    #about .text {
+        grid-area: textabout;
+    }
+
+    #about .text p {
+        text-align: justify;
+        font-size: 1.2rem;
+        padding: 0 10% 2vh 0;
+    }
+
+    #about .text p span.bold {
+        font-weight: bold;
+        color: var(--text-span);
+    }
+
+    #about .text p span.indent {
+        padding-left: 2rem;
+    }
+
+    #about .text p:nth-of-type(1) {
+        margin-top: 10vh;
+    }
+
+    #about div.button {
+        grid-area: button;
+        width: 100%;
+        margin: 0 0;
+        text-align: center;
+    }
+
+    #about>div.button i {
+        font-size: 3rem;
+        z-index: 1;
+        transform: rotate(212deg);
+        color: #000;
+    }
+
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+
+    header section div p:nth-of-type(1) {
+        font-size: 3rem;
+    }
+
+    header section div p:nth-of-type(2) {
+        font-size: 5rem;
+    }
+
+    header section div p:nth-of-type(3) {
+        left: 11rem;
+        font-size: 2.8rem;
+    }
+
+    header section h1 {
+        font-size: 2.1rem;
+
+    }
+
+    #about .text p {
+        font-size: 1.4rem;
     }
 }
 
-@media (min-width: 1200px) {
-
-    html {
-        font-size: 35px;
-    }
-}
-
-@media (orientation: landscape) {
-    html {
-        font-size: 8px;
-    }
-}
-
-@media (orientation: landscape) and (min-width: 641px) {
-
-    html {
-        font-size: 10px;
-    }
-}
-
-@media (orientation: landscape) and (min-width: 900px) {
-
-    html {
-        font-size: 14px;
-    }
-
+@media (orientation: portrait) and (min-width: 600px) {
     header {
-        background-image: url(img/pexels-photo-112989.jpeg);
+        background: center / cover no-repeat url("img/pexels-photo-112989.jpeg");
+    }
+
+    header section {
+        height: 35rem;
+        border-left: 0.3rem solid var(--text-header);
+    }
+
+    header section div p:nth-of-type(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 6rem;
+    }
+
+    header section div p:nth-of-type(2) {
+        position: absolute;
+        top: 4.5rem;
+        left: 3.5rem;
+        font-size: 8rem;
+    }
+
+    header section div p:nth-of-type(3) {
+        position: absolute;
+        top: 10rem;
+        left: 20rem;
+        width: 13rem;
+        height: 13rem;
+        font-size: 4rem;
+    }
+
+    header section h1 {
+        top: 24rem;
+        left: 6rem;
+        font-size: 3rem;
+    }
+
+    header>div i {
+        font-size: 8rem;
+    }
+
+
+    #about h2 {
+        font-size: 3.5rem;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        text-align: center;
+        margin: 0 auto;
+        letter-spacing: 2rem;
+        font-weight: normal;
+        padding-top: 50%;
+    }
+
+
+    #about>div.button i {
+        font-size: 5rem;
+    }
+
+    #about .text p {
+        font-size: 2rem;
     }
 }
 
-@media (orientation: landscape) and (min-width: 1200px) {
+@media (orientation: portrait) and (min-width: 750px) {
+    #about .text p {
+        font-size: 2.5rem;
+    }
 
-    html {
-        font-size: 22px;
+    #about h2 {
+        font-size: 4rem;
     }
 }
 
 
-/*
-  @media (min-width: 900px) { @content; }
+@media (orientation: portrait) and (min-width: 900px) {
+
+    header section {
+        height: 50rem;
+        border-left: 0.5rem solid var(--text-header);
+    }
+
+    header section div p:nth-of-type(1) {
+        font-size: 9rem;
+    }
+
+    header section div p:nth-of-type(2) {
+        top: 7.5rem;
+        left: 4.5rem;
+        font-size: 11rem;
+    }
+
+    header section div p:nth-of-type(3) {
+        top: 13rem;
+        left: 30rem;
+        width: 16rem;
+        height: 16rem;
+        font-size: 6.5rem;
+    }
+
+    header section h1 {
+        top: 36rem;
+        left: 8rem;
+        font-size: 4.5rem;
+    }
+
+    header>div i {
+        font-size: 11rem;
+    }
 
 
-  @media (min-width: 1200px) { @content; }
+    #about h2 {
+        font-size: 6rem;
+    }
 
 
-  @media (min-width: 1800px) { @content; }
-*/
+    #about>div.button i {
+        font-size: 8rem;
+    }
+
+    #about .text p {
+        font-size: 3.3rem;
+    }
+}
