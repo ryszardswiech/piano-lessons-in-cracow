@@ -122,7 +122,8 @@ a {
     /******************  SECTION ABOUT ****************/
 
     #about,
-    #reasons {
+    #reasons,
+    #prices {
         display: grid;
         grid-template-columns: 1fr 3fr;
         grid-template-rows: 9fr 1fr;
@@ -151,7 +152,8 @@ a {
     }
 
     #about h2,
-    #reasons h2 {
+    #reasons h2,
+    #prices h2 {
         grid-area: header-about;
         font-family: 'Poiret One', cursive;
         text-transform: uppercase;
@@ -165,12 +167,15 @@ a {
         padding-top: 2rem;
     }
 
-    #about .text {
+    #about .text,
+    #reasons .text,
+    #prices .text {
         grid-area: textabout;
     }
 
     #about .text p,
-    #reasons li {
+    #reasons li,
+    #prices .text {
         text-align: justify;
         font-size: 1.2rem;
         padding: 0 10% 2vh 0;
@@ -192,7 +197,8 @@ a {
     }
 
     #about div.button,
-    #reasons div.button {
+    #reasons div.button,
+    #prices div.button {
         grid-area: button;
         width: 100%;
         margin: 0 0;
@@ -200,7 +206,8 @@ a {
     }
 
     #about>div.button i,
-    #reasons>div.button i {
+    #reasons>div.button i,
+    #prices div.button i {
         font-size: 3rem;
         z-index: 1;
         transform: rotate(212deg);
@@ -210,7 +217,43 @@ a {
     #reasons li {
         margin-bottom: 1.5vh;
     }
+
+    #prices div.prices {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #prices .price {
+        position: relative;
+        width: 25vw;
+        height: 25vw;
+        background-color: #F8F7F6;
+        border: 3px solid #C8A99E;
+        border-radius: 50%;
+        overflow: visible;
+
+    }
+
+    #prices .price p {
+        display: inline-block;
+        position: absolute;
+        width: 250%;
+        font-size: 2rem;
+        font-family: 'Poiret One', cursive;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    #prices .prices>p {
+        color: var(--text-span);
+    }
 }
+
 
 @media (orientation: portrait) and (min-width: 360px) {
 
