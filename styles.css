@@ -121,7 +121,8 @@ a {
 
     /******************  SECTION ABOUT ****************/
 
-    #about {
+    #about,
+    #reasons {
         display: grid;
         grid-template-columns: 1fr 3fr;
         grid-template-rows: 9fr 1fr;
@@ -149,7 +150,8 @@ a {
 
     }
 
-    #about h2 {
+    #about h2,
+    #reasons h2 {
         grid-area: header-about;
         font-family: 'Poiret One', cursive;
         text-transform: uppercase;
@@ -158,7 +160,7 @@ a {
         text-orientation: upright;
         text-align: center;
         margin: 0 auto;
-        letter-spacing: 1.5rem;
+        letter-spacing: 1.3rem;
         font-weight: normal;
         padding-top: 2rem;
     }
@@ -167,13 +169,15 @@ a {
         grid-area: textabout;
     }
 
-    #about .text p {
+    #about .text p,
+    #reasons li {
         text-align: justify;
         font-size: 1.2rem;
         padding: 0 10% 2vh 0;
     }
 
-    #about .text p span.bold {
+    #about .text p span.bold,
+    #reasons li span.bold {
         font-weight: bold;
         color: var(--text-span);
     }
@@ -182,24 +186,30 @@ a {
         padding-left: 2rem;
     }
 
-    #about .text p:nth-of-type(1) {
+    #about .text p:nth-of-type(1),
+    #reasons li:nth-of-type(1) {
         margin-top: 10vh;
     }
 
-    #about div.button {
+    #about div.button,
+    #reasons div.button {
         grid-area: button;
         width: 100%;
         margin: 0 0;
         text-align: center;
     }
 
-    #about>div.button i {
+    #about>div.button i,
+    #reasons>div.button i {
         font-size: 3rem;
         z-index: 1;
         transform: rotate(212deg);
         color: #000;
     }
 
+    #reasons li {
+        margin-bottom: 1.5vh;
+    }
 }
 
 @media (orientation: portrait) and (min-width: 360px) {
@@ -222,7 +232,8 @@ a {
 
     }
 
-    #about .text p {
+    #about .text p,
+    #reasons li {
         font-size: 1.4rem;
     }
 }
@@ -271,7 +282,8 @@ a {
     }
 
 
-    #about h2 {
+    #about h2,
+    #reasons h2 {
         font-size: 3.5rem;
         writing-mode: vertical-rl;
         text-orientation: upright;
@@ -283,22 +295,27 @@ a {
     }
 
 
-    #about>div.button i {
+    #about>div.button i,
+    #reasons>div.button i {
         font-size: 5rem;
     }
 
-    #about .text p {
+    #about .text p,
+    #reasons li {
         font-size: 2rem;
     }
 }
 
 @media (orientation: portrait) and (min-width: 750px) {
-    #about .text p {
+
+    #about .text p,
+    #reasons li {
         font-size: 2.5rem;
     }
 
-    #about h2 {
-        font-size: 4rem;
+    #about h2,
+    #reasons h2 {
+        font-size: 3.5rem;
     }
 }
 
@@ -339,16 +356,19 @@ a {
     }
 
 
-    #about h2 {
-        font-size: 6rem;
+    #about h2,
+    #reasons h2 {
+        font-size: 5rem;
     }
 
 
-    #about>div.button i {
+    #about>div.button i,
+    #reasons>div.button i {
         font-size: 8rem;
     }
 
-    #about .text p {
+    #about .text p,
+    #reasons li {
         font-size: 3.3rem;
     }
 }
