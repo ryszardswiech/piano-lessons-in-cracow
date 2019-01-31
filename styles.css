@@ -126,10 +126,9 @@ a {
     #prices {
         display: grid;
         grid-template-columns: 1fr 3fr;
-        grid-template-rows: 9fr 1fr;
+        grid-template-rows: 1fr;
         grid-template-areas:
-            "header-about textabout"
-            "button button";
+            "header-about textabout";
         font-family: 'Comfortaa', cursive;
         color: var(--text-normal);
         min-height: 100vh;
@@ -196,24 +195,6 @@ a {
         margin-top: 10vh;
     }
 
-    #about div.button,
-    #reasons div.button,
-    #prices div.button {
-        grid-area: button;
-        width: 100%;
-        margin: 0 0;
-        text-align: center;
-    }
-
-    #about>div.button i,
-    #reasons>div.button i,
-    #prices div.button i {
-        font-size: 3rem;
-        z-index: 1;
-        transform: rotate(212deg);
-        color: #000;
-    }
-
     #reasons li {
         margin-bottom: 1.5vh;
     }
@@ -226,21 +207,28 @@ a {
         align-items: center;
     }
 
-    #prices .price {
+    #prices .pricewrapper {
+        width: 100%;
         position: relative;
+        margin-top: 5vh;
+    }
+
+    #prices .price {
+        position: absolute;
         width: 25vw;
         height: 25vw;
         background-color: #F8F7F6;
         border: 3px solid #C8A99E;
         border-radius: 50%;
-        overflow: visible;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
     }
 
-    #prices .price p {
-        display: inline-block;
+    #prices .pricewrapper .price pre {
+        display: block;
         position: absolute;
-        width: 250%;
         font-size: 2rem;
         font-family: 'Poiret One', cursive;
         top: 50%;
@@ -276,8 +264,14 @@ a {
     }
 
     #about .text p,
-    #reasons li {
+    #reasons li,
+    #prices pre,
+    #prices p {
         font-size: 1.4rem;
+    }
+
+    #prices .pricewrapper .price pre {
+        font-size: 2.2rem;
     }
 }
 
@@ -326,7 +320,8 @@ a {
 
 
     #about h2,
-    #reasons h2 {
+    #reasons h2,
+    #prices h2 {
         font-size: 3.5rem;
         writing-mode: vertical-rl;
         text-orientation: upright;
@@ -337,28 +332,35 @@ a {
         padding-top: 50%;
     }
 
-
-    #about>div.button i,
-    #reasons>div.button i {
-        font-size: 5rem;
+    #about .text p,
+    #reasons li,
+    #prices .price pre,
+    #prices p {
+        font-size: 2rem;
     }
 
-    #about .text p,
-    #reasons li {
-        font-size: 2rem;
+    #prices .pricewrapper .price pre {
+        font-size: 3rem;
     }
 }
 
 @media (orientation: portrait) and (min-width: 750px) {
 
     #about .text p,
-    #reasons li {
+    #reasons li,
+    #prices p,
+        {
         font-size: 2.5rem;
     }
 
     #about h2,
-    #reasons h2 {
+    #reasons h2,
+    #prices h2 {
         font-size: 3.5rem;
+    }
+
+    #prices .pricewrapper .price pre {
+        font-size: 4rem;
     }
 }
 
@@ -400,7 +402,8 @@ a {
 
 
     #about h2,
-    #reasons h2 {
+    #reasons h2,
+    #prices h2 {
         font-size: 5rem;
     }
 
@@ -411,7 +414,12 @@ a {
     }
 
     #about .text p,
-    #reasons li {
+    #reasons li,
+    #prices p {
         font-size: 3.3rem;
+    }
+
+    #prices .pricewrapper .price pre {
+        font-size: 5.5rem;
     }
 }
