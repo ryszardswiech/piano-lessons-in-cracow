@@ -74,21 +74,23 @@ a {
         position: relative;
     }
 
-    header section div p:nth-of-type(1) {
+    header section div h2:nth-of-type(1) {
         position: absolute;
         top: 0;
         left: 0;
         font-size: 2.5rem;
+        font-weight: normal;
     }
 
-    header section div p:nth-of-type(2) {
+    header section div h2:nth-of-type(2) {
         position: absolute;
         top: 2rem;
         left: 1.2rem;
         font-size: 4.5rem;
+        font-weight: normal;
     }
 
-    header section div p:nth-of-type(3) {
+    header section div h2:nth-of-type(3) {
         position: absolute;
         top: 5rem;
         left: 10rem;
@@ -96,6 +98,7 @@ a {
         height: 10rem;
         text-align: center;
         font-size: 2.5rem;
+        font-weight: normal;
     }
 
     header section h1 {
@@ -121,9 +124,7 @@ a {
 
     /******************  SECTION ABOUT ****************/
 
-    #about,
-    #reasons,
-    #prices {
+    .section {
         display: grid;
         grid-template-columns: 1fr 3fr;
         grid-template-rows: 1fr;
@@ -152,7 +153,8 @@ a {
 
     #about h2,
     #reasons h2,
-    #prices h2 {
+    #prices h2,
+    #contact h2 {
         grid-area: header-about;
         font-family: 'Poiret One', cursive;
         text-transform: uppercase;
@@ -166,15 +168,11 @@ a {
         padding-top: 2rem;
     }
 
-    #about .text,
-    #reasons .text,
-    #prices .text {
+    .text {
         grid-area: textabout;
     }
 
-    #about .text p,
-    #reasons li,
-    #prices .text {
+    .section {
         text-align: justify;
         font-size: 1.2rem;
         padding: 0 10% 2vh 0;
@@ -191,8 +189,9 @@ a {
     }
 
     #about .text p:nth-of-type(1),
-    #reasons li:nth-of-type(1) {
-        margin-top: 10vh;
+    #reasons li:nth-of-type(1),
+    #contact .address-info {
+        margin-top: 5vh;
     }
 
     #reasons li {
@@ -240,20 +239,81 @@ a {
     #prices .prices>p {
         color: var(--text-span);
     }
+
+    /*********** CONTACT SECTION **************/
+
+    #contact .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: #6E5F36;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    .address-info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .address-info div:last-of-type {
+        margin-top: 10%;
+    }
+
+    .with-border {
+        padding: 5px 0;
+        border-bottom: 3px solid #C8A99E;
+    }
+
+    .map {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .phone-info {
+        align-self: flex-end;
+    }
+
+    form input,
+    textarea {
+        background-color: #F8F7F6;
+        border: 3px solid rgba(200, 169, 158, 0.29);
+        margin: 0.5vh 0;
+        width: 100%;
+        font-family: 'Poiret One', cursive;
+        text-transform: uppercase;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .contact-details {
+        align-self: flex-end;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #C8A99E;
+    }
 }
 
+/*************** MEDIA QUERIES **********************/
 
 @media (orientation: portrait) and (min-width: 360px) {
 
-    header section div p:nth-of-type(1) {
+    header section div h2:nth-of-type(1) {
         font-size: 3rem;
     }
 
-    header section div p:nth-of-type(2) {
+    header section div h2:nth-of-type(2) {
         font-size: 5rem;
     }
 
-    header section div p:nth-of-type(3) {
+    header section div h2:nth-of-type(3) {
         left: 11rem;
         font-size: 2.8rem;
     }
@@ -285,21 +345,21 @@ a {
         border-left: 0.3rem solid var(--text-header);
     }
 
-    header section div p:nth-of-type(1) {
+    header section div h2:nth-of-type(1) {
         position: absolute;
         top: 0;
         left: 0;
         font-size: 6rem;
     }
 
-    header section div p:nth-of-type(2) {
+    header section div h2:nth-of-type(2) {
         position: absolute;
         top: 4.5rem;
         left: 3.5rem;
         font-size: 8rem;
     }
 
-    header section div p:nth-of-type(3) {
+    header section div h2:nth-of-type(3) {
         position: absolute;
         top: 10rem;
         left: 20rem;
@@ -321,7 +381,8 @@ a {
 
     #about h2,
     #reasons h2,
-    #prices h2 {
+    #prices h2,
+    #contact h2 {
         font-size: 3.5rem;
         writing-mode: vertical-rl;
         text-orientation: upright;
@@ -372,17 +433,17 @@ a {
         border-left: 0.5rem solid var(--text-header);
     }
 
-    header section div p:nth-of-type(1) {
+    header section div h2:nth-of-type(1) {
         font-size: 9rem;
     }
 
-    header section div p:nth-of-type(2) {
+    header section div h2:nth-of-type(2) {
         top: 7.5rem;
         left: 4.5rem;
         font-size: 11rem;
     }
 
-    header section div p:nth-of-type(3) {
+    header section div h2:nth-of-type(3) {
         top: 13rem;
         left: 30rem;
         width: 16rem;

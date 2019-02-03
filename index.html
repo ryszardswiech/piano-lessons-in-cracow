@@ -17,17 +17,17 @@
     <header>
         <section>
             <div>
-                <p>play</p>
-                <p>piano</p>
-                <p>with richard święch</p>
+                <h2>play</h2>
+                <h2>piano</h2>
+                <h2>with richard święch</h2>
                 <h1>the best<br>piano lessons in cracow</h1>
             </div>
         </section>
         <div><a href="#about"><i class="fas fa-play-circle"></i></a></div>
     </header>
-    <section id="about">
+    <section class="section" id="about">
         <div class="photo"><img src="img/mobile/richard1-mobile.png" alt=""></div>
-        <h2>about me</h2>
+        <h2 class="section-title">about me</h2>
         <div class="text">
             <p><span class="indent">My</span> name is Richard Święch. <span class="bold">I started learning piano when
                     I
@@ -68,8 +68,8 @@
                 knowing anything.</p>
         </div>
     </section>
-    <section id="reasons">
-        <h2>7 reasons why</h2>
+    <section class="section" id="reasons">
+        <h2 class="section-title">7 reasons why</h2>
         <div class="text">
             <ol>
                 <li><span class="bold">individual</span> piano lessons suited for <span class="bold">your needs and
@@ -88,8 +88,8 @@
             </ol>
         </div>
     </section>
-    <section id="prices">
-        <h2>prices</h2>
+    <section class="section" id="prices">
+        <h2 class="section-title">prices</h2>
         <div class="text">
             <div class="prices">
                 <div class="pricewrapper">
@@ -112,6 +112,41 @@
                     on
                     average time it may take to get from ul. Dworcowa to your place, but in average it’s around
                     10-20 PLN.</p>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="contact">
+        <h2 class="section-title">contact</h2>
+        <div class="text">
+            <div class="address-info">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.8273762221165!2d19.970566616043396!3d50.03333037941995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471644abe52da817%3A0x285372078f94af63!2sDworcowa+7%2C+33-332+Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1549213258456"
+                        width="0" height="0" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <p class="with-border">I'm here</p>
+                </div>
+            </div>
+            <div class="phone-info">
+                <p class="with-border">Call me</p>
+                <p class="with-border"><a href="tel:+48795772418">+48 795 772 418</a> </p>
+            </div>
+
+            <div class="contact-form">
+                <p class="with-border">Text me</p>
+                <form action="contact-form-handler.php" method="POST" id="contact-form">
+                    <input name="name" type="text" class="form-control" placeholder="Name" required><br>
+                    <input name="email" type="email" class="form-control" placeholder="Email" required><br>
+                    <input name="phone" type="tel" class="form-control" placeholder="Phone" required><br>
+                    <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
+                    <input type="submit" class="form-control submit" value="SEND MESSAGE">
+                </form>
+            </div>
+            <div class="contact-details">
+                <p>Smileflow ArtCompany - Ryszard Święch</p>
+                <p>Ul. Igołomska 59, 31-998 Kraków</p>
+                <p>Tel: + 48 795 772 418</p>
+                <p>NIP: 675-132-35-92, REGON: 122646006</p>
             </div>
         </div>
     </section>
