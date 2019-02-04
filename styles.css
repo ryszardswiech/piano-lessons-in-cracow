@@ -194,6 +194,14 @@ a {
         margin-top: 5vh;
     }
 
+    #reasons ol {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+
+    }
+
     #reasons li {
         margin-bottom: 1.5vh;
     }
@@ -326,13 +334,17 @@ a {
     #about .text p,
     #reasons li,
     #prices pre,
-    #prices p {
+    #prices p,
+    #contact p,
+    .contact-form input,
+    textarea {
         font-size: 1.4rem;
     }
 
     #prices .pricewrapper .price pre {
         font-size: 2.2rem;
     }
+
 }
 
 @media (orientation: portrait) and (min-width: 600px) {
@@ -396,7 +408,10 @@ a {
     #about .text p,
     #reasons li,
     #prices .price pre,
-    #prices p {
+    #prices p,
+    #contact p,
+    .contact-form input,
+    textarea {
         font-size: 2rem;
     }
 
@@ -416,7 +431,8 @@ a {
 
     #about h2,
     #reasons h2,
-    #prices h2 {
+    #prices h2,
+    #contact h2 {
         font-size: 3.5rem;
     }
 
@@ -464,7 +480,8 @@ a {
 
     #about h2,
     #reasons h2,
-    #prices h2 {
+    #prices h2,
+    #contact h2 {
         font-size: 5rem;
     }
 
@@ -476,7 +493,10 @@ a {
 
     #about .text p,
     #reasons li,
-    #prices p {
+    #prices p,
+    #contact p,
+    .contact-form input,
+    textarea {
         font-size: 3.3rem;
     }
 
